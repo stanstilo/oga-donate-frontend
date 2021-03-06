@@ -5,19 +5,30 @@
   padding-top:40px;
   .footer-row{
     display:flex;
-    padding-left:230px;
   }
   .footer-row h4{
     color:$logo_green;
   }
-  .Categories-col{
-      margin-left:240px;
+  .about-col{
+    width:20%;
+    margin-left:100px;
+    .about-col p{
+      color:#fff;
   }
-  .Categories-col p {
-    color:#fff;
+  }
+  .Categories-col{
+    width:70%;
+      .Categories-col p {
+        color:#fff;
+    }
+  }
+  
 }
-.about-col p{
-    color:#fff;
-}
-}
+// @media screen and (max-width:786px){
+//   .footer-row{
+//     padding-left:0px;
+//     border:1px solid red
+//   }
+//  }
+
 
