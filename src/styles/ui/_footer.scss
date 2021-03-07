@@ -9,26 +9,31 @@
   .footer-row h4{
     color:$logo_green;
   }
-  .about-col{
-    width:20%;
-    margin-left:100px;
-    .about-col p{
-      color:#fff;
-  }
-  }
-  .Categories-col{
-    width:70%;
-      .Categories-col p {
-        color:#fff;
+  @media screen and (min-width:701px){
+    .about-col{
+      width:40%;
+      margin-left:200px;
     }
   }
-  
+ 
+  .about-col p{
+    color:#fff;
 }
-// @media screen and (max-width:786px){
-//   .footer-row{
-//     padding-left:0px;
-//     border:1px solid red
-//   }
-//  }
+  .Categories-col{
+    width:55%;  
+  }
+  .Categories-col p {
+    color:#fff;
+}
+}
+@media screen and (max-width:700px){
+  .about-col{
+    width:50%;
+    margin-left:100px;
+ }
+ .Categories-col{
+  width:50%;  
+}
+}
 
 
