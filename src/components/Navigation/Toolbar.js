@@ -2,10 +2,10 @@ import React from 'react'
 import Navbar from './Navbar'
 import MenuToggle from './MenuToggle'
 
-const Toolbar = () => {
+const Toolbar = ({drawerToggleClicked}) => {
     return (
         <header className='toolbar'>
-            <MenuToggle/>
+            <MenuToggle clicked={drawerToggleClicked}/>
             <Navbar/>
         </header>
     )

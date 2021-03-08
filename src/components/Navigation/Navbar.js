@@ -18,6 +18,20 @@ const Navbar = () => {
               <a href="/">Home</a>
             </li>
             <li className="nav-item">
+              <a href="/">Fund Raise</a>
+              <ul className="nav__submenu">
+                <li className="nav__submenu-item ">
+                  <a>Personal</a>
+                </li>
+                <li className="nav__submenu-item ">
+                  <a>Community</a>
+                </li>
+                <li className="nav__submenu-item ">
+                  <a>NGO 0r Startup</a>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item">
               <a href="/app/campaigns/donate-to-fund">Donate</a>
             </li>
             <li className="nav-item">
@@ -39,7 +53,7 @@ const Navbar = () => {
             </li>
             <li>
               <Button variant="contained" className="nav-btn text-white">
-                 create causes
+                Buy To Support
               </Button>
             </li>
           </ul>
