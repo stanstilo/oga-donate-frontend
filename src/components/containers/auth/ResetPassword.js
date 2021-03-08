@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { reset_password } from '../../../actions/auth/auth';
+import { reset_password } from 'store/actions/Auth';
+
+
 
 const ResetPassword = ({ reset_password }) => {
     const [requestSent, setRequestSent] = useState(false);
@@ -38,6 +40,7 @@ const ResetPassword = ({ reset_password }) => {
                         onChange={e => onChange(e)}
                         required
                     />
+                   
                 </div>
                 <button className='btn btn-primary' type='submit'>Reset Password</button>
             </form>

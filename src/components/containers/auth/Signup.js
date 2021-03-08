@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import { signup } from "../../../actions/auth/auth";
+import { signup } from "store/actions/Auth";
 import axios from "axios";
-// import '../../../styles/auth/authLayout.css'
+
 
 const Signup = ({ signup, isAuthenticated }) => {
   const [accountCreated, setAccountCreated] = useState(false);

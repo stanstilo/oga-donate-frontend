@@ -5,11 +5,16 @@ $logo_green: #05591B;
 $logo_orange: rgb(243, 147, 38);
 
 // Nav Style
+.toolbar{
+  background-color:$logo_green;
+  width:100%;
+  height:68px;
+}
 .navbar {
   position:sticky;
-  background-color:$logo_green;
   justify-content:center;
   align-items:center;
+  height:100%;
   ul{
     list-style: none;
   }
@@ -58,4 +63,28 @@ $logo_orange: rgb(243, 147, 38);
 }
 .bar-right{
   display:flex
+}
+
+.menu-toggle {
+  width: 40px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.menu-button {
+  width: 90%;
+  height:3px;
+  background-color:white;
+  margin-top:14%
+}
+
+@media (min-width: 500px) {
+  .menu-toggle {
+      display: none;
+  }
 }

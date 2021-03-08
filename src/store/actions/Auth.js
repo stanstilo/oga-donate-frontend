@@ -19,7 +19,7 @@ import {
     FACEBOOK_AUTH_SUCCESS,
     FACEBOOK_AUTH_FAIL,
     LOGOUT
-} from './types';
+} from './ActionTypes';
 
 export const load_user = () => async dispatch => {
     if (localStorage.getItem('access')) {
@@ -96,7 +96,6 @@ export const facebookAuthenticate = (state, code) => async dispatch => {
         };
 
         const formBody = Object.keys(details).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(details[key])).join('&');
-
         try {
             const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/o/facebook/?${formBody}`, config);
 
@@ -158,10 +157,8 @@ export const login = (email, password) => async dispatch => {
     };
 
     const body = JSON.stringify({ email, password });
-
     try {
         const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/jwt/create/`, body, config);
-
         dispatch({
             type: LOGIN_SUCCESS,
             payload: res.data

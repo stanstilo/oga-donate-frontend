@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { reset_password_confirm } from '../../../actions/auth/auth';
+import { reset_password_confirm } from 'store/actions/Auth';
 
 const ResetPasswordConfirm = ({ match, reset_password_confirm }) => {
     const [requestSent, setRequestSent] = useState(false);

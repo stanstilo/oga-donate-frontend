@@ -1,14 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Signup from './containers/auth/Signup';
-import Activate from './containers/auth/Activate';
-import ResetPassword from './containers/auth/ResetPassword';
-import ResetPasswordConfirm from './containers/auth/ResetPasswordConfirm';
-import Google from './containers/auth/Google';
-import Home from './containers/pages/Home';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Signup from './containers/Auth/Signup';
+import Activate from './containers/Auth/Activate';
+import ResetPassword from './containers/Auth/ResetPassword';
+import ResetPasswordConfirm from './containers/Auth/ResetPasswordConfirm';
+import Google from './containers/Auth/Google';
+import Home from './containers/Pages/Home';
 
 const MainApp = () => (
-        <Router>
+        <BrowserRouter>
                 <Switch>
                     <Route exact path='/' component={Home} />
                     <Route exact path='/signup' component={Signup} />
@@ -17,7 +17,7 @@ const MainApp = () => (
                     <Route exact path='/password/reset/confirm/:uid/:token' component={ResetPasswordConfirm} />
                     <Route exact path='/activate/:uid/:token' component={Activate} />
                 </Switch>
-        </Router>
+        </BrowserRouter>
 );
 
 export default MainApp;

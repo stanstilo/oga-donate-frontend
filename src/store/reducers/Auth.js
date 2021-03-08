@@ -18,7 +18,7 @@ import {
     FACEBOOK_AUTH_SUCCESS,
     FACEBOOK_AUTH_FAIL,
     LOGOUT
-} from '../actions/auth/types';
+} from '../actions/ActionTypes';
 
 const initialState = {
     access: localStorage.getItem('access'),
@@ -94,4 +94,5 @@ const auth= (state = initialState, action) =>{
             return state
     }
 };
+
 export default auth;
