@@ -31,12 +31,24 @@ const Cards = () => {
            Charity
          </span>
         <h4 className="card-title">Donation</h4>   
-        </div>
-        </div> 
         <LinearProgressWithLabel value={70}/>
+        <div className="row contributed-progress-view ">
+          <p>$1,000</p>
+          <span className='percent'>232%</span>
+        </div>
+        <div className="donate-btn-container">
         <Button variant="contained" className="donate-btn">
            Donate
         </Button>
+        </div>
+        <hr/>
+        <div className="admin-targ row">
+          <p>by Admin</p>
+          <span className='no__deadline'>No deadline</span>
+        </div>
+        </div>
+        </div> 
+       
       </div>
     </>
   )

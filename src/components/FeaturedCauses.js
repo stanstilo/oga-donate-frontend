@@ -11,13 +11,13 @@ const FeaturedCauses = () => {
 
       <div className="feature">
         <div className="feat-row">
-          <div className="col-9 col-md-6 col-lg-4">
+          <div className="col-12 col-md-6 col-lg-4">
             <Cards />
           </div>
-          <div className="col-9 col-md-6 col-lg-4">
+          <div className="col-12 col-md-6 col-lg-4">
             <Cards />
           </div>
-          <div className="col-9 col-md-6 col-lg-4">
+          <div className="col-12 col-md-6 col-lg-4">
             <Cards />
           </div>
         </div>

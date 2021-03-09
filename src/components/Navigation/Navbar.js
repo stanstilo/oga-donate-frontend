@@ -1,55 +1,162 @@
-import React, { Fragment, useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import React from "react";
+import { Link, Redirect, withRouter, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 // import { logout } from '../actions/auth';
 import Logo from "../../assets/images/logo.jpeg";
 import Button from "@material-ui/core/Button";
 
-const Navbar = () => {
+const Navbar = ({history}) => {
   return (
     <>
-      <nav className="navbar d-none d-md-flex navbar-light">
-        <div className="logo nav-left">
+      <nav className="donate__navbar">
+        {/* logo */}
+        <div className="nav-left">
           <img src={Logo} alt="log" className="logo" />
         </div>
-        <div>
-          <ul className="nav-center  mt-1">
+
+        {/* nav-center */}
+        <div className='navbar-center-container'>
+          <ul className="navbar-center">
             <li className="nav-item">
-              <a href="/">Home</a>
+            <NavLink
+                  to="/"
+                  exact
+                  activeClassName="navigation-link--active"
+                  className="navigation-link"
+                >
+                 Home
+                </NavLink>
             </li>
-            <li className="nav-item">
-              <a href="/">Fund Raise</a>
+            <li className="nav-item fund-nav">
+            <NavLink
+                  to="/fundraise"
+                  exact
+                  activeClassName="navigation-link--active"
+                  className="navigation-link"
+                >
+                  Fund Raise
+                </NavLink>
               <ul className="nav__submenu">
                 <li className="nav__submenu-item ">
-                  <a>Personal</a>
+                <NavLink
+                  to="/"
+                  exact
+                  activeClassName="navigation-link--active"
+                  className="navigation-link"
+                >
+                  Personal
+                </NavLink>
                 </li>
                 <li className="nav__submenu-item ">
-                  <a>Community</a>
+                <NavLink
+                  to="/community"
+                  exact
+                  activeClassName="navigation-link--active"
+                  className="navigation-link"
+                >
+                  Community
+                </NavLink>
                 </li>
                 <li className="nav__submenu-item ">
-                  <a>NGO 0r Startup</a>
+                <NavLink
+                  to="/ngo"
+                  exact
+                  activeClassName="navigation-link--active"
+                  className="navigation-link"
+                >
+                  NGO
+                </NavLink>
+
+                </li>
+                <li className="nav__submenu-item ">
+                <NavLink
+                  to="/startup"
+                  exact
+                  activeClassName="navigation-link--active"
+                  className="navigation-link"
+                >
+                  Start up
+                </NavLink>   
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item donate-nav">
+            <NavLink
+                  to="/donate"
+                  exact
+                  activeClassName="navigation-link--active"
+                  className="navigation-link"
+                >
+                  Donate
+                </NavLink>
+              <ul className="nav__submenu">
+              <NavLink
+                  to="/donate-cash"
+                  exact
+                  activeClassName="navigation-link--active"
+                  className="navigation-link"
+                >
+                  Donate cash
+                </NavLink>
+                <li className="nav__submenu-item ">
+                <NavLink
+                  to="/donate-item"
+                  exact
+                  activeClassName="navigation-link--active"
+                  className="navigation-link"
+                >
+                  Donate item
+                </NavLink>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <a href="/app/campaigns/donate-to-fund">Donate</a>
+            <NavLink
+                  to="/auction"
+                  exact
+                  activeClassName="navigation-link--active"
+                  className="navigation-link"
+                >
+                  Auction
+                </NavLink>
             </li>
             <li className="nav-item">
-              <a href="/">Auction</a>
-            </li>
-            <li className="nav-item">
-              <a href="/">About Us</a>
+              <NavLink
+                  to="/about"
+                  exact
+                  activeClassName="navigation-link--active"
+                  className="navigation-link"
+                >
+                  About Us
+                </NavLink>
             </li>
           </ul>
         </div>
-
-        <div className="__right-container">
-          <ul className="bar-right mt-2">
+        
+        {/* right container */}
+        <div className="__end-right-container">
+          <div className='bar-right-col'>
+            <div className='test-col'>
+          <ul className="bar-right">
             <li className="nav-item">
-              <a href="/signup">Sign up</a>
+            <NavLink
+                  to="/signup"
+                  exact
+                  activeClassName="navigation-link--active"
+                  className="navigation-link"
+                >
+                  Sign up
+                </NavLink>
             </li>
             <li className="nav-item">
-              <a href="/signin">Login</a>
+               <NavLink
+                  to="/signin"
+                  exact
+                  activeClassName="navigation-link--active"
+                  className="navigation-link"
+                >
+                  Login
+                </NavLink>
             </li>
             <li>
               <Button variant="contained" className="nav-btn text-white">
@@ -57,14 +164,14 @@ const Navbar = () => {
               </Button>
             </li>
           </ul>
+          </div>
+          </div>
         </div>
       </nav>
     </>
   );
 };
 
-const mapStateToProps = (state) => ({
-  isAuthenticated: state.auth.isAuthenticated,
-});
 
-export default connect(mapStateToProps)(Navbar);
+
+export default withRouter(Navbar);

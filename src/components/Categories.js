@@ -24,13 +24,13 @@ const Categories = () =>  {
         <div className="container">
           <div className="align-items-center justify-content-center">
           <Swiper 
-          spaceBetween={2}
-           slidesPerView={2}
+          spaceBetween={4}
+           slidesPerView={4}
            pagination={{ clickable: true }}
-           autoplay={{
-            delay: 5000,
-            disableOnInteraction: false
-            }}
+          //  autoplay={{
+          //   delay: 5000,
+          //   disableOnInteraction: false
+          //   }}
             speed={8}
            lazyloading={true}
            loop={true}
@@ -48,7 +48,7 @@ const Categories = () =>  {
               className="align-items-center d-flex justify-content-center category-slide"
               style={{ backgroundImage: `url(${business})` }}
               >
-              <h4 className="text-category text-white d-flex ">Business</h4>
+              <h4 className="text-category d-flex ">Business</h4>
             </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -56,7 +56,7 @@ const Categories = () =>  {
               className="align-items-center d-flex justify-content-center category-slide"
               style={{ backgroundImage: `url(${charity})`}}
             >
-              <h4 className="text-category text-white">Charity</h4>
+              <h4 className="text-category">Charity</h4>
             </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -64,7 +64,39 @@ const Categories = () =>  {
               className="d-flex align-items-center justify-content-center category-slide"
               style={{ backgroundImage: `url(${community})` }}
             >
-              <h4 className="text-category text-white ">Community</h4>
+              <h4 className="text-category">Community</h4>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div
+              className="align-items-center d-flex justify-content-center  category-slide"
+              style={{ backgroundImage: `url(${animal})` }}
+            >
+              <h4 className="text-category text-white">Animals</h4>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide>    
+            <div
+              className="align-items-center d-flex justify-content-center category-slide"
+              style={{ backgroundImage: `url(${business})` }}
+              >
+              <h4 className="text-category d-flex ">Business</h4>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div
+              className="align-items-center d-flex justify-content-center category-slide"
+              style={{ backgroundImage: `url(${charity})`}}
+            >
+              <h4 className="text-category">Charity</h4>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div
+              className="d-flex align-items-center justify-content-center category-slide"
+              style={{ backgroundImage: `url(${community})` }}
+            >
+              <h4 className="text-category">Community</h4>
             </div>
             </SwiperSlide>
          </Swiper>

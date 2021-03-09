@@ -2,69 +2,98 @@ $black: #000;
 $text_color: #fff;
 $white: #fff;
 $logo_green: #05591b;
-$logo_orange: rgb(243, 147, 38);
+$logo_orange: rgb(199, 90, 0);
 
 // Nav Style
 .toolbar {
   background-color: $logo_green;
-  width: 100%;
-  height: 68px;
+  height: 75px;
+  width:100%;
 }
-.navbar {
-  position: sticky;
-  justify-content: center;
-  align-items: center;
+*{
+  box-sizing: border-box;
+}
+.donate__navbar {
   height: 100%;
+  display:flex;
+  .nav-left{
+   padding-top: 20px;
+  }
+  .logo {
+    width: 150px;
+  }
+  
+  }
   ul {
     list-style: none;
   }
-  & li {
-    padding: 0 5px;
-    & a {
-      padding: 4px 10px;
+   .nav-item {
+     padding: 0px 7px;
+     .navigation-link {
       color: $white;
+      padding: 0px 10px !important;
     }
-    & a:hover,
-    & a:focus {
+    & a:hover, .navigation-link:hover{
       text-decoration: none;
     }
+    & a:focus, .navigation-link:focus {
+      text-decoration: none;
+    }
+    
+    .navigation-link--active {
+      border-bottom: 2px solid $logo_orange;
+      transition: border-bottom .5s ease-in-out; 
+      &:hover{
+        border:none;
+      }
+    }
   }
-}
 
-.logo {
-  width: 150px;
-}
-
-.create-cause-button {
-  background-color: $logo_orange;
-  color: $text_color;
-  height: 39px;
-  width: 140px;
-  text-align: center;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-size: 15px;
-  font-weight: 500;
-  a {
-    color: $white;
-    text-decoration: none;
+  .navbar-center-container{
+  .navbar-center {
+    display: flex; 
+    padding-top:15px;
+    .fund-nav, .donate-nav {
+      position: relative;
+        &:hover{
+          .nav__submenu {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.3s visibility ease-in 0.1s, 0.4s opacity ease-out;
+          }
+        }
+    
+      & .nav__submenu {
+        position: absolute;
+        z-index: 1000;
+        width: 150px;
+        background-color:$logo_orange;
+        padding: 10px 15px;
+        color: white;
+        top: 20px;
+        visibility: hidden;
+        opacity: 0;
+      }
+    } 
   }
-}
-.nav-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.__right-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-top: 10px;
-}
-.bar-right {
-  display: flex;
-}
+  }
 
+  .__end-right-container {
+    padding-top:20px;  
+    .bar-right-col{
+     .bar-right {
+      display: flex;
+    } 
+    }
+  }
+ 
+ 
+
+
+
+
+
+// menu toggle
 .menu-toggle {
   width: 40px;
   display: flex;
@@ -148,26 +177,3 @@ $logo_orange: rgb(243, 147, 38);
   transform: translateX(-100%);
 }
 
-.nav-item {
-  position: relative;
-
-  & .nav__submenu {
-    position: absolute;
-    z-index: 4;
-    width: 150px;
-    background-color: red;
-    padding: 10px 15px;
-    color: white;
-    top: 20px;
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  &:hover{
-    .nav__submenu-item {
-    visibility: visible;
-    opacity: 1;
-    transition: 0.3s visibility ease-in 0.1s, 0.4s opacity ease-out;
-  }
-  }
-}

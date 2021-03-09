@@ -1,12 +1,15 @@
-.donate-btn{
-  background-color: $logo_orange !important;
-  width:30% !important;
-  margin:5px auto !important;
+
+.donate-btn-container{
+  padding-left:130px;
+  .donate-btn{
+    background-color: $logo_orange !important;
+    width:55% !important;
+    color:#fff !important;
+  }
 }
 
 .nav-btn{
   background-color: $logo_orange !important;
   padding-left:7px !important;
   padding-right:7px !important;
-  // margin:5px auto !important;
 }

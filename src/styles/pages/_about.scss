@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+.about-container{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto; 
+} 
+ @media(min-width:1200px){
+    .about-container{
+        max-width:1160px;
+    }
+}
+ @media(min-width:992px) and (max-width:1199px){
+   .about-container{
+    max-width:960px
+   } 
+   }  
+
+ @media(min-width:768px) and (max-width:991px){
+    .about-container{
+     max-width:780px
+   }
+}
+   @media(min-width:568) and (max-width:767px){
+     .about-container{
+         max-width:540px
+   }
+} 
+
+.ogadonate-row{
+    display:flex;
+    flex-wrap:wrap; 
+} 
+
+.ogadonate-text{
+  line-height:35px;
+  opacity:1;
+  font-family:'Muli', sans-serif;
+  color:#000;
+  font-size:1.2rem;
+}
+ .column_1{
+    width:100%;
+    position:relative;
+} 
+/* media Queries */
+@media(min-width:992px){
+    .column_1{
+      max-width:65%;
+      flex:0 0 65%; 
+      padding-bottom:50px
+    }
+} 
+ @media(min-width:768px) and (max-width:991px){
+    .column_1{
+      max-width:60%;
+      flex:0 0 60%; 
+      padding-bottom:50px
+    }
+} 
+
+@media(min-width:568px) and (max-width:767px){
+    .column_1{
+      max-width:52%;
+      flex:0 0 52%; 
+      padding-bottom:50px;
+      margin-left:2%;
+    }
+} 
+ .column_2{
+    width:100%;
+    position:relative
+}
+
+@media(min-width:992px){
+    .column_2{
+      max-width:33%;
+      flex:0 0 33%;
+      margin-left:2%;
+    }
+}
+
+@media(min-width:768px) and (max-width:991px){
+    .column_2{
+      max-width:38%;
+      flex:0 0 38%;
+      margin-left:2%;
+    }
+}
+
+@media(min-width:568px) and (max-width:767px){
+    .column_2{
+      max-width:40%;
+      flex:0 0 40%;
+      margin-left:3%;
+    }
+}
+
+.about-elements{
+  margin-left:3%
+}
+
+.drop{
+    background-color: #40a4c8;
+    padding:6px;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 1rem;   
+}
+
+.email-section, .textarea-section, .name-section{
+    margin-top: 4%;
+}
+.btn-primary{
+    border-style:none;
+    background-color:#40a4c8;
+}
+.address-sect{
+    height:300px;  
+    background-color:#f8f9fa;
+}
+.address-subdiv{
+    background-color: #409799;
+    padding:16px;  
+    border: 1px solid #409799
+}
+ 
+.address-subdiv h5{
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+} 
+
+span{
+    padding-left:5px;
+}
+p{
+    font-size: 1rem;
+}

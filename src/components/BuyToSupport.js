@@ -10,13 +10,13 @@ const BuyToSupport = () => {
 
       <div className="feature">
         <div className="feat-row">
-          <div className="col-9 col-md-6 col-lg-4">
+          <div className="col-12 col-md-6 col-lg-4">
             <SupportCards />
           </div>
-          <div className="col-9 col-md-6 col-lg-4">
+          <div className="col-12 col-md-6 col-lg-4">
             <SupportCards />
           </div>
-          <div className="col-9 col-md-6 col-lg-4">
+          <div className="col-12 col-md-6 col-lg-4">
             <SupportCards />
           </div>
         </div>

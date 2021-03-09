@@ -11,17 +11,28 @@
   }
   @media screen and (min-width:701px){
     .about-col{
-      width:40%;
+      width:30%;
       margin-left:200px;
     }
   }
- 
   .about-col p{
     color:#fff;
 }
   .Categories-col{
-    width:55%;  
+    width:30%;  
   }
+
+    .social-icons-col{
+      width:15%;
+      text-align: center;
+      color:#fff;
+      font-size:30px;
+      .twitter-icon, .facebook-icon, .instagram-icon{
+        padding-left:30px;
+        cursor:pointer;
+      }
+    }
+  
   .Categories-col p {
     color:#fff;
 }
@@ -35,5 +46,6 @@
   width:50%;  
 }
 }
+
 
 
